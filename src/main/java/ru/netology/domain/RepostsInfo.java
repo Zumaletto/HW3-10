@@ -1,24 +1,24 @@
 package ru.netology.domain;
 
 public class RepostsInfo {
-    private int amount;
-    private String id_user;
+    private int count;
+    private int[] user_reposted;
     private boolean canRepost;
 
-    public int getAmount() {
-        return amount;
+    public int getCount() {
+        return count;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setCount(int count) {
+        this.count = count;
     }
 
-    public String getId_user() {
-        return id_user;
+    public int[] getUser_reposted() {
+        return user_reposted;
     }
 
-    public void setId_user(String id_user) {
-        this.id_user = id_user;
+    public void setUser_reposted(int[] user_reposted) {
+        this.user_reposted = user_reposted;
     }
 
     public boolean isCanRepost() {

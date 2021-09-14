@@ -1,58 +1,66 @@
 package ru.netology.domain;
 
+import javax.xml.transform.sax.SAXResult;
+
 public class Post {
-    private String id;
-    private String id_admin;
-    private String id_user;
-    private String imageUrl;
-    private String linksInfo;
+    private int id;
+    private int owner_id;
+    private int from_id;
+    private int created_by;
+    private int dateAndTime;
     private String text;
-    private String dateAndTime;
-    private LikesInfo likesInfo;
+    private int reply_owner_id;
+    private int reply_post_id;
     private CommentsInfo commentsInfo;
+    private Copyright copyright;
+    private LikesInfo likesInfo;
     private RepostsInfo repostInfo;
     private ViewsInfo viewsInfo;
+    private String post_source;
+    private int signer_id;
+    private int[] can_pin;
+    private int[] can_delete;
+    private int[] can_edit;
+    private int postponed_id;
     private boolean complain;
     private boolean favorite;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getId_admin() {
-        return id_admin;
+    public int getOwner_id() {
+        return owner_id;
     }
 
-    public void setId_admin(String id_admin) {
-        this.id_admin = id_admin;
+    public void setOwner_id(int owner_id) {
+        this.owner_id = owner_id;
     }
 
-    public String getId_user() {
-        return id_user;
+    public int getFrom_id() {
+        return from_id;
     }
 
-    public void setId_user(String id_user) {
-        this.id_user = id_user;
+    public void setFrom_id(int from_id) {
+        this.from_id = from_id;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public int getCreated_by() {
+        return created_by;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setCreated_by(int created_by) {
+        this.created_by = created_by;
     }
 
-    public String getLinksInfo() {
-        return linksInfo;
-    }
+    public int getDateAndTime() { return dateAndTime; }
 
-    public void setLinksInfo(String linksInfo) {
-        this.linksInfo = linksInfo;
+    public void setDateAndTime(int dateAndTime) {
+        this.dateAndTime = dateAndTime;
     }
 
     public String getText() {
@@ -63,20 +71,20 @@ public class Post {
         this.text = text;
     }
 
-    public String getDateAndTime() {
-        return dateAndTime;
+    public int getReply_owner_id() {
+        return reply_owner_id;
     }
 
-    public void setDateAndTime(String dateAndTime) {
-        this.dateAndTime = dateAndTime;
+    public void setReply_owner_id(int reply_owner_id) {
+        this.reply_owner_id = reply_owner_id;
     }
 
-    public LikesInfo getLikesInfo() {
-        return likesInfo;
+    public int getReply_post_id() {
+        return reply_post_id;
     }
 
-    public void setLikesInfo(LikesInfo likesInfo) {
-        this.likesInfo = likesInfo;
+    public void setReply_post_id(int reply_post_id) {
+        this.reply_post_id = reply_post_id;
     }
 
     public CommentsInfo getCommentsInfo() {
@@ -85,6 +93,22 @@ public class Post {
 
     public void setCommentsInfo(CommentsInfo commentsInfo) {
         this.commentsInfo = commentsInfo;
+    }
+
+    public Copyright getCopyright() {
+        return copyright;
+    }
+
+    public void setCopyright(Copyright copyright) {
+        this.copyright = copyright;
+    }
+
+    public LikesInfo getLikesInfo() {
+        return likesInfo;
+    }
+
+    public void setLikesInfo(LikesInfo likesInfo) {
+        this.likesInfo = likesInfo;
     }
 
     public RepostsInfo getRepostInfo() {
@@ -101,6 +125,54 @@ public class Post {
 
     public void setViewsInfo(ViewsInfo viewsInfo) {
         this.viewsInfo = viewsInfo;
+    }
+
+    public String getPost_source() {
+        return post_source;
+    }
+
+    public void setPost_source(String post_source) {
+        this.post_source = post_source;
+    }
+
+    public int getSigner_id() {
+        return signer_id;
+    }
+
+    public void setSigner_id(int signer_id) {
+        this.signer_id = signer_id;
+    }
+
+    public int[] getCan_pin() {
+        return can_pin;
+    }
+
+    public void setCan_pin(int[] can_pin) {
+        this.can_pin = can_pin;
+    }
+
+    public int[] getCan_delete() {
+        return can_delete;
+    }
+
+    public void setCan_delete(int[] can_delete) {
+        this.can_delete = can_delete;
+    }
+
+    public int[] getCan_edit() {
+        return can_edit;
+    }
+
+    public void setCan_edit(int[] can_edit) {
+        this.can_edit = can_edit;
+    }
+
+    public int getPostponed_id() {
+        return postponed_id;
+    }
+
+    public void setPostponed_id(int postponed_id) {
+        this.postponed_id = postponed_id;
     }
 
     public boolean isComplain() {

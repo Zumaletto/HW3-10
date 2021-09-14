@@ -1,51 +1,51 @@
 package ru.netology.domain;
 
 public class CommentsInfo {
-    private int amount;
+    private int count;
+    private int[] can_post;
+    private int[] groups_can_post;
+    private boolean can_close;
+    private boolean can_open;
     private String text;
-    private String id_user;
-    private String id;
-    private String id_admin;
-    private boolean canComment;
 
-    public String getId_user() {
-        return id_user;
+    public int getCount() {
+        return count;
     }
 
-    public void setId_user(String id_user) {
-        this.id_user = id_user;
+    public void setCount(int count) {
+        this.count = count;
     }
 
-    public String getId() {
-        return id;
+    public int[] getCan_post() {
+        return can_post;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCan_post(int[] can_post) {
+        this.can_post = can_post;
     }
 
-    public String getId_admin() {
-        return id_admin;
+    public int[] getGroups_can_post() {
+        return groups_can_post;
     }
 
-    public void setId_admin(String id_admin) {
-        this.id_admin = id_admin;
+    public void setGroups_can_post(int[] groups_can_post) {
+        this.groups_can_post = groups_can_post;
     }
 
-    public boolean isCanComment() {
-        return canComment;
+    public boolean isCan_close() {
+        return can_close;
     }
 
-    public void setCanComment(boolean canComment) {
-        this.canComment = canComment;
+    public void setCan_close(boolean can_close) {
+        this.can_close = can_close;
     }
 
-    public int getAmount() {
-        return amount;
+    public boolean isCan_open() {
+        return can_open;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setCan_open(boolean can_open) {
+        this.can_open = can_open;
     }
 
     public String getText() {
