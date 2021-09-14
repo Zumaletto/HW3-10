@@ -18,12 +18,36 @@ public class Post {
     private ViewsInfo viewsInfo;
     private String post_source;
     private int signer_id;
-    private int[] can_pin;
-    private int[] can_delete;
-    private int[] can_edit;
+    private boolean can_pin;
+    private boolean can_delete;
+    private boolean can_edit;
     private int postponed_id;
     private boolean complain;
     private boolean favorite;
+
+    public boolean isCan_pin() {
+        return can_pin;
+    }
+
+    public void setCan_pin(boolean can_pin) {
+        this.can_pin = can_pin;
+    }
+
+    public boolean isCan_delete() {
+        return can_delete;
+    }
+
+    public void setCan_delete(boolean can_delete) {
+        this.can_delete = can_delete;
+    }
+
+    public boolean isCan_edit() {
+        return can_edit;
+    }
+
+    public void setCan_edit(boolean can_edit) {
+        this.can_edit = can_edit;
+    }
 
     public int getId() {
         return id;
@@ -57,7 +81,9 @@ public class Post {
         this.created_by = created_by;
     }
 
-    public int getDateAndTime() { return dateAndTime; }
+    public int getDateAndTime() {
+        return dateAndTime;
+    }
 
     public void setDateAndTime(int dateAndTime) {
         this.dateAndTime = dateAndTime;
@@ -141,30 +167,6 @@ public class Post {
 
     public void setSigner_id(int signer_id) {
         this.signer_id = signer_id;
-    }
-
-    public int[] getCan_pin() {
-        return can_pin;
-    }
-
-    public void setCan_pin(int[] can_pin) {
-        this.can_pin = can_pin;
-    }
-
-    public int[] getCan_delete() {
-        return can_delete;
-    }
-
-    public void setCan_delete(int[] can_delete) {
-        this.can_delete = can_delete;
-    }
-
-    public int[] getCan_edit() {
-        return can_edit;
-    }
-
-    public void setCan_edit(int[] can_edit) {
-        this.can_edit = can_edit;
     }
 
     public int getPostponed_id() {
