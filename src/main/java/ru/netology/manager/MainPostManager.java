@@ -5,13 +5,13 @@ import ru.netology.domain.Post;
 public class MainPostManager {
     private PostManager postManager;
 
-    public Post[] search(owner_id, domain, query, owners_only, count, offset) {
+    public Post[] search(int owner_id, String domain, String query, boolean owners_only, int count, int offset) {
         Post[] post = PostManager.getPostsForFeed();
         //
         return null;
     }
 
-    public void delete(owner_id, post_id) {
+    public void delete(int owner_id, int post_id) {
         Post[] post = PostManager.getPostsForFeed();
         //
     }
